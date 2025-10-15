@@ -4,7 +4,7 @@
 This project explores the highest mountains in the world using data collected from Wikipedia’s “List of mountains by elevation” page.
 The data was extracted directly from the web using Python’s web scraping capabilities (requests + pandas.read_html) and combined into one complete dataset for analysis.
 
-The goal of this project was to:
+## The goal of this project was to:
 
 Scrape and merge multiple mountain elevation tables from Wikipedia
 
@@ -14,14 +14,14 @@ Calculate the percentage of mountains located in the United States, India, and C
 
 Visualize mountain height comparisons using a bar chart
 
-🧩 Problem Statement
+# 🧩 Problem Statement
 
 Mountains across the world are distributed across various ranges and elevations.
 However, this data is often scattered across multiple tables online.
 
 The challenge was to collect, clean, and combine this scattered information from Wikipedia to create a single, structured dataset for global mountain analysis.
 
-❓ Key Analytical Questions
+# ❓ Key Analytical Questions
 
 How can we extract structured mountain data from a Wikipedia page using Python?
 
@@ -31,65 +31,67 @@ What percentage of mountains are located in the United States, India, and Canada
 
 How do the heights of selected mountains compare visually?
 
-🔍 Data Extraction Process
+# 🔍 Data Extraction Process
 
 The dataset was gathered using the following steps:
 
-Fetched data from Wikipedia:Used the URL List of mountains by elevation.
+Fetched data from Wikipedia:
+Used the URL List of mountains by elevation.
+
 The requests library was used to retrieve HTML content.
 
 Parsed HTML tables using Pandas:
 pd.read_html() automatically detected and extracted all mountain tables (8 total tables ranging from 8,000m to 1,000m+).
 
-Merged all tables:
+# Merged all tables:
 Each table was combined into a single DataFrame of 1,651 rows, containing columns like
 Mountain, Metres, Feet, Range, and Location and notes.
 
-Exported the final dataset:
+# Exported the final dataset:
 Saved the merged dataset as combined_dataset.csv for future analysis.
 
-📊 Analysis & Findings
-🌎 Total Mountains Combined
+# 📊 Analysis & Findings
+# 🌎 Total Mountains Combined
 
 1,651 mountains merged into a single dataset.
 
-Mountains in the United States:
+## 🇺🇸 Mountains in the United States
 
 348 mountains found in the U.S.
 
 Percentage: 21.09% of total dataset.
 
-Mountains in India:
+## 🇮🇳 Mountains in India
 
 95 mountains found in India.
 
 Percentage: 5.75% of total dataset.
 
-Mountains in Canada:
+## 🇨🇦 Mountains in Canada
 
 96 mountains found in Canada.
 
 Percentage: 5.82% of total dataset.
 
-📈 Visualization Insights
+# 📈 Visualization Insights
 
 A bar chart was created to visualize the height differences among selected mountains.
 
 Since the dataset contains over 1,000 entries, every 61st mountain was selected for visualization.
 This helped compare the elevations without overcrowding the chart.
 
-📊 Chart: Heights of Various Mountains (Sampled Every 61st)
+# 📊 Chart: Heights of Various Mountains (Sampled Every 61st)
 The chart shows how Mount Everest dominates the dataset, standing at 8,848 meters, followed by other 8,000m+ peaks in the Himalayas and Karakoram ranges.
 
-🗂️ Project Structure
+# 🗂️ Project Structure
 Highest_Mountains_Project/
 │
-├── Highest_Mountain.html                  # Exported notebook (web scraping & analysis)
+├── done.html                  # Exported notebook (web scraping & analysis)
 ├── combined_dataset.csv        # Final merged dataset
 ├── README.md                   # Project overview & documentation
-└── images/                     
+└── images/                     # (Optional) Folder for charts and visualizations
 
-🛠️ Tools & Technologies Used
+# 🛠️ Tools & Technologies Used
 
 Python – Core programming language
 
@@ -105,7 +107,7 @@ Jupyter Notebook – Code execution and analysis
 
 GitHub – Version control and project hosting
 
-📌 Conclusion
+# 📌 Conclusion
 
 This project successfully demonstrates how to:
 
@@ -116,5 +118,3 @@ Clean and merge unstructured web data into a usable format
 Perform percentage-based country analysis
 
 Visualize large datasets effectively using sampling techniques
-
-The Highest Mountains Project serves as an excellent example of how web scraping, data analysis, and visualization can be combined to transform raw online information into meaningful insights.
